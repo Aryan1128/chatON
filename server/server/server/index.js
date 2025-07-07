@@ -10,7 +10,7 @@ const io = new Server(server);
 
 app.use(express.static('public'));
 
-// Group creation endpoint
+/
 app.get('/create-group', (req, res) => {
   const groupId = Math.random().toString(36).substring(2, 8);
   db.run('INSERT INTO groups(id) VALUES (?)', [groupId], (err) => {
@@ -37,4 +37,5 @@ io.on('connection', (socket) => {
 server.listen(3000, () => {
   console.log('Server running on http://localhost:3000');
 });
+
 

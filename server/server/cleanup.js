@@ -8,3 +8,4 @@ cron.schedule('0 * * * *', () => {
     WHERE timestamp < DATETIME('now', '-24 hours')
   `);
 });
+
